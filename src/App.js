@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ssb">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ppdt" element={<PPDTTest />} />
