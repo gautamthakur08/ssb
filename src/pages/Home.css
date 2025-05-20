@@ -1,0 +1,71 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #06402B;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #0D5C3D; /* richer green */
+  color: #E1F5EC; /* light text */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  flex: 1;
+}
+
+.test-card {
+  background: #0B2E22; /* dark card for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #E1F5EC; /* light text for readability */
+  height: fit-content;
+}
+
+.test-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-content h2 {
+  color: #D0EAD7; /* light green for heading */
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  color: #A9CDBB; /* soft green-grey for text */
+  margin: 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #043322; /* darker footer */
+  color: #D0EAD7; /* light muted green */
+  margin-top: auto;
+}

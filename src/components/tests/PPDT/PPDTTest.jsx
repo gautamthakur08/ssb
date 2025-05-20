@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import Timer from './Timer';
-import Banner from './Banner';
+import Timer from '../../common/Timer';
+import Banner from '../../common/Banner';
+import bellSound from '../../../sounds/bell.mp3'
 import './PPDTTest.css';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 // Import all images from assets directory
 const importAll = (r) => r.keys().map(r);
-const imageContext = require.context('../assets', false, /\.(png|jpe?g|svg)$/);
+const imageContext = require.context('../../../assets', false, /\.(png|jpe?g|svg)$/);
 const allImages = importAll(imageContext);
 
 const PPDTTest = () => {
@@ -16,16 +17,16 @@ const PPDTTest = () => {
   const [images, setImages] = useState([]);
   
   useEffect(() => {
-    try {
-      if ((testPhase === 'writing' || testPhase === 'viewing') && fullscreenHandle.active === false) {
-        fullscreenHandle.enter();
-      } else if (testPhase !== 'writing' && testPhase !== 'viewing' && fullscreenHandle.active) {
-        fullscreenHandle.exit();
-      }
-    } catch (error) {
-      console.error('Fullscreen error:', error);
+    if (
+      (testPhase === 'writing' || testPhase === 'viewing' || testPhase === 'transition') &&
+      fullscreenHandle.active === false
+    ) {
+      fullscreenHandle.enter().catch((err) => {
+        console.error('Fullscreen enter failed:', err);
+      });
     }
   }, [testPhase, fullscreenHandle]);
+
 
 
   useEffect(() => {
@@ -50,19 +51,19 @@ const PPDTTest = () => {
     setTestPhase('viewing');
 
     setTimeout(() => {
-      new Audio('/sounds/bell.mp3').play();
+      new Audio(bellSound).play();
       setTestPhase('transition');
 
       setTimeout(() => {
         setTestPhase('writing');
 
         setTimeout(() => {
-          new Audio('/sounds/bell.mp3').play();
+          new Audio(bellSound).play();
           setTestPhase('completed');
         }, 240000); // 4 mins
       }, 5000); // Delay for transition (3s)
       
-    }, 30000); // viewing duration (3s)
+    }, 3000); // viewing duration (3s)
   };
 
 

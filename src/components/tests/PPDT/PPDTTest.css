@@ -6,6 +6,8 @@
   min-height: 100vh;
   padding: 20px;
   text-align: center;
+  background-color: #06402B;
+  color: #26A269;
 }
 
 .start-screen {
@@ -15,17 +17,19 @@
 .start-button {
   padding: 12px 24px;
   font-size: 18px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
+  background-color: #1E6F4A; /* rich green */
+  color: #E0F7EF;            /* soft light text */
+  border: 1px solid #26A269; /* subtle accent */
+  border-radius: 6px;
   cursor: pointer;
   margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .start-button:hover {
-  background-color: #45a049;
+  background-color: #248F63; /* lighter hover */
 }
+
 
 .image-viewer {
   width: 100%;
@@ -118,15 +122,16 @@
   text-align: center;
   font-size: 1.1rem;
   background-color: #f8f9fa;
-  width: max-content;
+  width: 100px;
 }
 
 .image-item:hover {
-  background-color: #e9f5ff;
-  border-color: #b8daff;
+  background-color: #0B5D3C; /* dark teal green */
+  border-color: #1FA774;     /* soft green accent */
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* deeper shadow for contrast */
 }
+
 
 .image-item.selected {
   background-color: #d4edff;
