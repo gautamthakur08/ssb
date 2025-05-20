@@ -1,0 +1,14 @@
+{
+  "set1": [
+    "apple", "banana", "cherry", "date", "elderberry",
+    "fig", "grape", "honeydew", "kiwi", "lemon"
+  ],
+  "set2": [
+    "mountain", "river", "valley", "forest", "desert",
+    "ocean", "island", "canyon", "waterfall", "glacier"
+  ],
+  "set3": [
+    "happy", "sad", "angry", "excited", "calm",
+    "nervous", "confident", "shy", "proud", "lonely"
+  ]
+}
