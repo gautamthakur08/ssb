@@ -1,0 +1,148 @@
+.ppdt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.start-screen {
+  max-width: 600px;
+}
+
+.start-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.start-button:hover {
+  background-color: #45a049;
+}
+
+.image-viewer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ppdt-image {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.viewing-timer {
+  margin-top: 20px;
+}
+
+.banner {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+.writing-phase {
+  width: 100%;
+  max-width: 800px;
+}
+
+.story-input {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.timer {
+  font-size: 24px;
+  margin: 20px 0;
+  color: #f8f9fa;
+}
+
+.completed-screen {
+  max-width: 800px;
+}
+
+.story-review {
+  text-align: left;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+
+
+/* Image Selection Styles */
+/* Improved selection list */
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 25px 0;
+  width: 80%;
+  max-width: 400px;
+}
+
+.image-item {
+  padding: 15px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: #f8f9fa;
+  width: max-content;
+}
+
+.image-item:hover {
+  background-color: #e9f5ff;
+  border-color: #b8daff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-item.selected {
+  background-color: #d4edff;
+  border-color: #007bff;
+  color: #0056b3;
+  font-weight: 600;
+}
+
+
+.fullscreen-image {
+  object-fit: contain;
+  width: 90%;
+}
+
+.fullscreen-enabled{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
